@@ -1,0 +1,6 @@
+com\mycompany\lab4\resources\JavaEE8Resource.class
+tpsi\web\HelloServlet.class
+com\mycompany\lab4\JAXRSConfiguration.class
+tpsi\web\Person.class
+tpsi\web\LicznikServlet.class
+tpsi\web\PersonListServlet.class
