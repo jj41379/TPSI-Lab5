@@ -42,6 +42,14 @@ public class LicznikServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
             HttpSession session = request.getSession();
+            Integer licznik = (Integer)session.getAttribute("licznik");
+            if(licznik != null){
+                licznik++;
+            }
+            else licznik = 1;
+            
+            session.setAttribute("licznik",licznik);
+        
             Person osoba = new Person(request.getParameter("imie"), request.getParameter("nazwisko"), request.getParameter("email"));
             List<Person> studenci = (List<Person>) session.getAttribute("listaStudentow");
             studenci.add(osoba);
